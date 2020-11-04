@@ -8,7 +8,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 
 public class EchoClient {

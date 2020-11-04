@@ -1,5 +1,7 @@
 package inbound;
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.Channel;
@@ -10,12 +12,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
-import org.slf4j.LoggerFactory;
-
-import java.util.logging.Logger;
 
 public class HttpInboundServer {
-    private static Logger logger = (Logger) LoggerFactory.getLogger(HttpInboundServer.class);
+    private static Logger logger = LoggerFactory.getLogger(HttpInboundServer.class);
 
     private int port;
     private String proxyServer;

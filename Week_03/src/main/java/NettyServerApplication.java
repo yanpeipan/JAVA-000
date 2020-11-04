@@ -12,10 +12,10 @@ public class NettyServerApplication {
         System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION + " starting...");
         HttpInboundServer s = new HttpInboundServer(Integer.parseInt(proxyPort), proxyServer);
 
-        System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION +" started at http://localhost:" + proxyPort + " for server:" + proxyServer);
+        System.out.println(GATEWAY_NAME + " " + GATEWAY_VERSION + " started at http://localhost:" + proxyPort + " for server:" + proxyServer);
         try {
             s.run();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
