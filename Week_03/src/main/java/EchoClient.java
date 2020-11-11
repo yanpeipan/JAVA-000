@@ -53,7 +53,6 @@ public class EchoClient {
         ChannelFuture f = null;
         try {
             f = b.connect("127.0.0.1", 8000).sync();
-            f.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
             worker.shutdownGracefully();
