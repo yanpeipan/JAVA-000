@@ -89,3 +89,6 @@ logs
 # gradle
 .gradle
 
+.idea
+.vscode
+.mvn
