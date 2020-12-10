@@ -103,14 +103,14 @@ dataSources:
 shardingRule:
  tables:
    t_order:
-     actualDataNodes: ds_${0..1}.t_order_${0..1}
+     actualDataNodes: ds_${0..1}.t_order_${0..7}
      tableStrategy:
        inline:
-         shardingColumn: order_id
-         algorithmExpression: t_order_${order_id % 2}
+         shardingColumn: id
+         algorithmExpression: t_order_${id % 8}
      keyGenerator:
        type: SNOWFLAKE
-       column: order_id
+       column: id
    t_order_item:
      actualDataNodes: ds_${0..1}.t_order_item_${0..1}
      tableStrategy:
@@ -124,7 +124,7 @@ shardingRule:
    - t_order,t_order_item
  defaultDatabaseStrategy:
    inline:
-     shardingColumn: user_id
-     algorithmExpression: ds_${user_id % 2}
+     shardingColumn: id
+     algorithmExpression: ds_${id % 2}
  defaultTableStrategy:
    none:
