@@ -1,0 +1,4 @@
+[mysqld]
+server-id=101
+log-bin=mysql-slave-bin
+relay_log=edu-mysql-relay-bin
